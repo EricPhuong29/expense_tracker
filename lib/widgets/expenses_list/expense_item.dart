@@ -10,15 +10,19 @@ class ExpenseItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Color(0xff47ffff),
+      // color: Color(0xff47ffff),
       child: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 20.0,
           vertical: 16,
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(expense.title),
+            Text(
+              expense.title,
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
             const SizedBox(
               height: 5,
             ),
@@ -41,6 +45,3 @@ class ExpenseItem extends StatelessWidget {
     );
   }
 }
-
-
-
